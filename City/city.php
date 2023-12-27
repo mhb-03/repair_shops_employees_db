@@ -11,7 +11,7 @@ $offers = query('SELECT * from city');
 </head>
 <body>
 
-<h2>city List</h2>
+<h2>City List</h2>
 
 <table border="1">
  	<tr>
@@ -20,19 +20,21 @@ $offers = query('SELECT * from city');
 		<th>city_name</th>
 		<th>options</th>
  	</tr>
- <tbody>
+
+	<tbody>
 	<?php foreach ($offers as $row) : ?>
-	   <tr>
-		  <td><?=$row['id']; ?></td>
-		  <td><?=$row['postal_code']; ?></td>
-		  <td><?=$row['city_name']; ?></td>
-		  <td> 
+		<tr>
+			<td><?=$row['id']; ?></td>
+			<td><?=$row['postal_code']; ?></td>
+			<td><?=$row['city_name']; ?></td>
+			<td> 
 				<a href="update_city.php?id=<?= $row["id"]; ?>" class="btn btn-primary">UPDATE</a>
 				<a href="delete_city.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">Delete</a>
  		  
           	</td>
-	</tr>
-	  <?php endforeach; ?>
+		</tr>
+	<?php endforeach; ?>
+	</tbody>
 </table>
 
 <br>

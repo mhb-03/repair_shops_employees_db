@@ -1,37 +1,37 @@
 <?php 
- // koneksi database 
- $conn = mysqli_connect("localhost","root","","repair_shops_employees"); 
+// koneksi database 
+$conn = mysqli_connect("localhost","root","","repair_shops_employees"); 
   
- // data muncul di web 
- function query($query){
-        global $conn;  
-        $result = mysqli_query($conn,$query); 
-        $rows =[]; 
-        while( $row=mysqli_fetch_assoc($result)){ 
-            $rows[] = $row; 
+// data muncul di web 
+function query($query){
+    global $conn;  
+    $result = mysqli_query($conn,$query); 
+    $rows =[]; 
+    while( $row=mysqli_fetch_assoc($result)){ 
+        $rows[] = $row; 
 
-        } 
-        return $rows; 
+    } 
+    return $rows; 
         
-  }
-  // Fungsi Tambah customers 
-  function tambah($data) 
-  { 
-      global $conn; 
-  
-      // Untuk mendapatkan waktu sekarang
-      // Jika Anda menggunakan kolom dengan tipe data timestamp, Anda bisa menggunakan CURRENT_TIMESTAMP langsung di dalam query
+}
+
+// Fungsi Tambah customers 
+function tambah($data) 
+{ 
+    global $conn; 
       
-      // Get form data from HTML script
-      $id = htmlspecialchars($data["id"]); 
-      $position_name = htmlspecialchars($data["position_name"]); 
+    // Get form data from HTML script
+    $id = htmlspecialchars($data["id"]); 
+    $position_name = htmlspecialchars($data["position_name"]); 
   
-      $query = "INSERT INTO employee_position (id, position_name) 
-                VALUES ('$id', '$position_name')";
+    $query = "INSERT INTO employee_position (id, position_name) 
+              VALUES ('$id', '$position_name')";
     
-      mysqli_query($conn, $query); 
-      return mysqli_affected_rows($conn); 
-  }
+    mysqli_query($conn, $query); 
+    return mysqli_affected_rows($conn); 
+}
+
+// Fungsi untuk menghapus data posisi
 function hapus_position($id) 
 { 
     global $conn; 
@@ -40,6 +40,7 @@ function hapus_position($id)
 
     return mysqli_affected_rows($conn);
 }
+
 // Fungsi untuk mengupdate data customer
 function update_cust($data) 
 { 
@@ -49,8 +50,8 @@ function update_cust($data)
     $position_name = htmlspecialchars($data["position_name"]);
 
     $query = "UPDATE employee_position SET 
-                  id = '$id', 
-                  position_name = '$position_name'
+                id = '$id', 
+                position_name = '$position_name'
               WHERE id = $id";
 
     mysqli_query($conn, $query);

@@ -47,6 +47,6 @@ if (isset($_POST['submit'])) {
 
 <br>
 
-<a href="repair_shop.php">Back to repair_shop List</a>
+<a href="repair_shop.php">Back to Shop List</a>
 </body>
 </html>

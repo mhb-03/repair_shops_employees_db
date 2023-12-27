@@ -7,7 +7,7 @@ $offers = query('SELECT * from employee_position');
 <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<title>position</title>
+ 	<title>Employee Position</title>
 </head>
 <body>
 
@@ -26,7 +26,7 @@ $offers = query('SELECT * from employee_position');
 		  <td><?=$row['position_name']; ?></td>
 		  <td> 
 				<a href="update_position.php?id=<?= $row["id"]; ?>" class="btn btn-primary">UPDATE</a>
-				<a href="delete_position.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">Delete</a>
+				<a href="delete_position.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">DELETE</a>
  		  
           	</td>
 	</tr>
@@ -35,7 +35,7 @@ $offers = query('SELECT * from employee_position');
 
 <br>
 
-<a href="add_position.php">Add New position</a>
+<a href="add_position.php">Add New Position</a>
 
 
 </body>

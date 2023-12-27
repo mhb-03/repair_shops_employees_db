@@ -34,17 +34,16 @@ if (isset($_POST["submit"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mengubah Data</title>
-    <form action="" method="POST" enctype="multipart/form-data">
+</head>
+
+<body>
+<form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $ops["id"]; ?>">
         <input type="text" name="position_name" value="<?= $ops["position_name"]; ?>">
         <div class="form-group  center">
             <button type="submit" name="submit">Submit</button>
         </div>
-
-</head>
-
-<body>
-
+    </form>
 </body>
 
 </html>

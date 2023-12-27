@@ -7,7 +7,7 @@ $offers = query('SELECT * from repair_shop');
 <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<title>repair_shop</title>
+ 	<title>Repair Shop</title>
 </head>
 <body>
 
@@ -21,21 +21,23 @@ $offers = query('SELECT * from repair_shop');
 		<th>details</th>
 		<th>city_id</th>
  	</tr>
- <tbody>
+ 	
+	<tbody>
 	<?php foreach ($offers as $row) : ?>
-	   <tr>
-		  <td><?=$row['id']; ?></td>
-		  <td><?=$row['shop_name']; ?></td>
-		  <td><?=$row['address']; ?></td>
-		  <td><?=$row['details']; ?></td>
-		  <td><?=$row['city_id']; ?></td>
-		  <td> 
+		<tr>
+			<td><?=$row['id']; ?></td>
+			<td><?=$row['shop_name']; ?></td>
+			<td><?=$row['address']; ?></td>
+			<td><?=$row['details']; ?></td>
+			<td><?=$row['city_id']; ?></td>
+			<td> 
 				<a href="update_repair.php?id=<?= $row["id"]; ?>" class="btn btn-primary">UPDATE</a>
-				<a href="delete_repair.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">Delete</a>
+				<a href="delete_repair.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">DELETE</a>
  		  
           	</td>
-	</tr>
-	  <?php endforeach; ?>
+		</tr>
+	<?php endforeach; ?>
+	</tbody>
 </table>
 
 <br>

@@ -39,7 +39,7 @@ $offers = query('SELECT * from employee');
 		  	<td><?=$row['is_active']; ?></td>
 			<td> 
 				<a href="update_employee.php?id=<?= $row["id"]; ?>" class="btn btn-primary">UPDATE</a>
-				<a href="delete_employee.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">Delete</a>
+				<a href="delete_employee.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">DELETE</a>
  		  	
 			</td>
 		</tr>

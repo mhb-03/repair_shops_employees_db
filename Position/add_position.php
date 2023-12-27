@@ -24,11 +24,11 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add position</title>
+    <title>Add Position</title>
 </head>
 <body>
 
-<h2>Add New position</h2>
+<h2>Add New Position</h2>
 
 <form action="add_position.php" method="post">
 <label for="id">id:</label>
@@ -41,6 +41,6 @@ if (isset($_POST['submit'])) {
 
 <br>
 
-<a href="position.php">Back to position List</a>
+<a href="employee_position.php">Back to Position List</a>
 </body>
 </html>

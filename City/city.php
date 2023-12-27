@@ -7,7 +7,7 @@ $offers = query('SELECT * from city');
 <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	<title>city</title>
+ 	<title>City</title>
 </head>
 <body>
 
@@ -29,7 +29,7 @@ $offers = query('SELECT * from city');
 			<td><?=$row['city_name']; ?></td>
 			<td> 
 				<a href="update_city.php?id=<?= $row["id"]; ?>" class="btn btn-primary">UPDATE</a>
-				<a href="delete_city.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">Delete</a>
+				<a href="delete_city.php?id=<?= $row["id"]; ?>" class="btn btn-danger" role="button" aria-pressed="true" onclick="return confirm('Are you sure?')">DELETE</a>
  		  
           	</td>
 		</tr>
@@ -39,7 +39,7 @@ $offers = query('SELECT * from city');
 
 <br>
 
-<a href="add_city.php">Add New city</a>
+<a href="add_city.php">Add New City</a>
 
 
 </body>
